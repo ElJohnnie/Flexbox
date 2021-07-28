@@ -19,6 +19,36 @@
 /*end header*/
 
 
+/*cursos*/
+
+.conteudoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link {
+    width: 23%;
+    margin: 1%;
+}
+
+
+/*pegando o elemento que é multiplo de 4... 0, 4, 8, 12*/
+
+.conteudoPrincipal-cursos-link:nth-child(4n) {
+    margin-right: 0;
+}
+
+
+/*pegando o elemento inverso aos de cima*/
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1) {
+    margin-left: 0;
+}
+
+
+/*fim cursos*/
+
+
 /*mapa de cursos*/
 
 .rodapePrincipal-navMap-list {
