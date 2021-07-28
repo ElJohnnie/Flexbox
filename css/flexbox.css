@@ -19,6 +19,21 @@
 /*end header*/
 
 
+/*mapa de cursos*/
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    /*a direção do flex que eu quero*/
+    flex-direction: column;
+    height: 250px;
+    /*filhos não coubem no pai, quebra*/
+    flex-wrap: wrap;
+}
+
+
+/*fim mapa de cursos*/
+
+
 /*footer*/
 
 .rodapePrincipal-patrocinadores .container {
