@@ -1,5 +1,8 @@
 /*Quem é o pai dos itens que quero alinhar? */
 
+
+/*header*/
+
 .cabecalhoPrincipal .container {
     display: flex;
     /*alinhar elementos do flex*/
@@ -11,3 +14,34 @@
 .cabecalhoPrincipal-nav {
     display: flex;
 }
+
+
+/*end header*/
+
+
+/*footer*/
+
+.rodapePrincipal-patrocinadores .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    width: 70%;
+    margin-right: 5%;
+    /*espaço em volta dos elementos*/
+    justify-content: space-around;
+}
+
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
+
+
+/*end footer*/
