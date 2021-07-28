@@ -1,92 +1,113 @@
-/*Quem é o pai dos itens que quero alinhar? */
-
-
-/*header*/
-
-.cabecalhoPrincipal .container {
-    display: flex;
-    /*alinhar elementos do flex*/
-    align-items: center;
-    /*espaço entre os elementos filhos das classes*/
-    justify-content: space-between;
-}
-
-.cabecalhoPrincipal-nav {
-    display: flex;
-}
-
-
-/*end header*/
-
-
-/*cursos*/
-
-.conteudoPrincipal-cursos {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.conteudoPrincipal-cursos-link {
-    width: 23%;
-    margin: 1%;
-}
-
-
-/*pegando o elemento que é multiplo de 4... 0, 4, 8, 12*/
-
-.conteudoPrincipal-cursos-link:nth-child(4n) {
-    margin-right: 0;
-}
-
-
-/*pegando o elemento inverso aos de cima*/
-
-.conteudoPrincipal-cursos-link:nth-child(4n+1) {
-    margin-left: 0;
-}
-
-
-/*fim cursos*/
-
-
-/*mapa de cursos*/
-
-.rodapePrincipal-navMap-list {
-    display: flex;
-    /*a direção do flex que eu quero*/
-    flex-direction: column;
-    height: 250px;
-    /*filhos não coubem no pai, quebra*/
-    flex-wrap: wrap;
-}
-
-
-/*fim mapa de cursos*/
-
-
-/*footer*/
-
-.rodapePrincipal-patrocinadores .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.rodapePrincipal-patrocinadores-list {
-    display: flex;
-    width: 70%;
-    margin-right: 5%;
-    /*espaço em volta dos elementos*/
-    justify-content: space-around;
-}
-
-.rodapePrincipal-contatoForm {
-    width: 25%;
-}
-
-.rodapePrincipal-contatoForm-fieldset {
-    display: flex;
-}
-
-
-/*end footer*/
+    /*Quem é o pai dos itens que quero alinhar? */
+    /* Align items mexe com o eixo vertical e o justify-content com o eixo horizontal */
+    /*header*/
+    
+    .cabecalhoPrincipal .container {
+        display: flex;
+        /*alinhar elementos do flex*/
+        align-items: center;
+        /*espaço entre os elementos filhos das classes*/
+        justify-content: space-between;
+    }
+    
+    .cabecalhoPrincipal-nav {
+        display: flex;
+    }
+    /*end header*/
+    /*cursos*/
+    
+    .conteudoPrincipal-cursos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .conteudoPrincipal-cursos-link {
+        width: 23%;
+        margin-bottom: 1%;
+    }
+    /*pegando o elemento que é multiplo de 4... 0, 4, 8, 12*/
+    
+    .conteudoPrincipal-cursos-link:nth-child(4n) {
+        margin-left: 0;
+    }
+    /*pegando o elemento inverso aos de cima*/
+    
+    .conteudoPrincipal-cursos-link:nth-child(4n+1) {
+        margin-left: 0;
+    }
+    /*fim cursos*/
+    /*mapa de cursos*/
+    
+    .rodapePrincipal-navMap {
+        width: 100% !important;
+    }
+    
+    .rodapePrincipal-navMap-list {
+        display: flex;
+        /*a direção do flex que eu quero*/
+        flex-direction: column;
+        /*filhos não coubem no pai, quebra*/
+        flex-wrap: wrap;
+        height: 250px;
+    }
+    /*fim mapa de cursos*/
+    /*footer*/
+    
+    .rodapePrincipal-patrocinadores .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .rodapePrincipal-patrocinadores-list {
+        display: flex;
+        width: 70%;
+        margin-right: 5%;
+        /*espaço em volta dos elementos*/
+        justify-content: space-around;
+    }
+    
+    .rodapePrincipal-contatoForm {
+        width: 25%;
+    }
+    
+    .rodapePrincipal-contatoForm-fieldset {
+        display: flex;
+    }
+    /*end footer*/
+    /* Parte mobile */
+    /*parte mobile*/
+    
+    @media(max-width: 768px) {
+        .cabecalhoPrincipal-nav {
+            flex-direction: column;
+        }
+        .cabecalhoPrincipal .container {
+            flex-direction: column;
+            align-items: initial;
+            text-align: center;
+        }
+        .conteudoPrincipal-cursos {
+            flex-direction: column;
+        }
+        .conteudoPrincipal-cursos-link {
+            width: 100%;
+        }
+        .rodapePrincipal-navMap-list {
+            height: auto;
+        }
+        .rodapePrincipal-patrocinadores .container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .rodapePrincipal-contatoForm {
+            width: 100%;
+        }
+        .rodapePrincipal-patrocinadores-list {
+            margin: 0;
+            width: 100%;
+        }
+        .rodapePrincipal-contatoForm-fieldset {
+            justify-content: center
+        }
+    }
