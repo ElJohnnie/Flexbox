@@ -1,0 +1,13 @@
+/*Quem é o pai dos itens que quero alinhar? */
+
+.cabecalhoPrincipal .container {
+    display: flex;
+    /*alinhar elementos do flex*/
+    align-items: center;
+    /*espaço entre os elementos filhos das classes*/
+    justify-content: space-between;
+}
+
+.cabecalhoPrincipal-nav {
+    display: flex;
+}
